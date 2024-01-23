@@ -71,4 +71,58 @@
       </div>
     </section>
   </body>
+  <script>
+    var form = document.getElementById("form");
+    const sendbtn = document.querySelector("#send-button");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      sendbtn.style.cursor = "wait";
+      sendbtn.textContent = "Please wait...";
+      sendbtn.style.backgroundColor = "lightblue";
+      sendbtn.disabled = true;
+  
+      setTimeout(() => {
+        // var username = document.getElementById("username").value;
+        // var email = document.getElementById("email").value;
+        // var message = document.getElementById("message").value;
+  
+        // console.log("User Information after delay:", { username, email, message });
+  
+        sendbtn.style.cursor = "pointer";
+        sendbtn.textContent = "Send";
+        sendbtn.style.backgroundColor = "blue";
+        sendbtn.disabled = false;
+      }, 5000);
+  
+      var username = document.getElementById("username").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+  
+      console.log("User Information:", { username, email, message });
+    });
+
+
+  
+    // const sendbtn = document.querySelector("#send-button");
+  
+    // sendbtn.onclick = function () {
+    //   sendbtn.style.cursor = "wait";
+    //   sendbtn.textContent = "Please wait...";
+    //   sendbtn.style.backgroundColor = "lightblue";
+    //   sendbtn.disabled = true;
+  1
+    //   setTimeout(() => {
+    //     var username = document.getElementById("username").value;
+    //     var email = document.getElementById("email").value;
+    //     var message = document.getElementById("message").value;
+  
+    //     console.log("User Information after delay:", { username, email, message });
+  
+    //     sendbtn.style.cursor = "pointer";
+    //     sendbtn.textContent = "Send";
+    //     sendbtn.style.backgroundColor = "blue";
+    //     sendbtn.disabled = false;
+    //   }, 5000);
+    // };
+  </script>
 </html>
